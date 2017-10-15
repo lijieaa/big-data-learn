@@ -39,7 +39,7 @@ public class HdfsApp {
     @Test
     public void open() throws IOException {
 
-        FSDataInputStream fsDataInputStream = fs.open(new Path("/input"));
+        FSDataInputStream fsDataInputStream = fs.open(new Path("/output/part-r-00000"));
 
         IOUtils.copyBytes(fsDataInputStream,System.out,4096,true);
 
